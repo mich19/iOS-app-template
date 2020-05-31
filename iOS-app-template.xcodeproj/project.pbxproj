@@ -9,8 +9,12 @@
 /* Begin PBXBuildFile section */
 		0E7D1FEE06AE222D0EE9E218 /* Pods_iOS_app_templateTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 884B0CD7E50AC87F8735BC5E /* Pods_iOS_app_templateTests.framework */; };
 		88A4BD1AC8476D5CF49B1BD7 /* Pods_iOS_app_template_iOS_app_templateUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C628E1E0DC80DD8D9666918F /* Pods_iOS_app_template_iOS_app_templateUITests.framework */; };
+		FB1C74B62483337900D3D1A7 /* HTTPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1C74B52483337900D3D1A7 /* HTTPService.swift */; };
+		FB1C74B82483364D00D3D1A7 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1C74B72483364D00D3D1A7 /* HTTPMethod.swift */; };
+		FB1C74BA248336FF00D3D1A7 /* HTTPResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1C74B9248336FF00D3D1A7 /* HTTPResult.swift */; };
+		FB1C74BC2483387800D3D1A7 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1C74BB2483387800D3D1A7 /* HTTPClient.swift */; };
+		FB1C74BE2483399B00D3D1A7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1C74BD2483399B00D3D1A7 /* SceneDelegate.swift */; };
 		FB463408248315D400931404 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB463407248315D400931404 /* AppDelegate.swift */; };
-		FB46340A248315D400931404 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB463409248315D400931404 /* SceneDelegate.swift */; };
 		FB46340C248315D400931404 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB46340B248315D400931404 /* ViewController.swift */; };
 		FB46340F248315D400931404 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB46340D248315D400931404 /* Main.storyboard */; };
 		FB463411248315D500931404 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB463410248315D500931404 /* Assets.xcassets */; };
@@ -47,9 +51,13 @@
 		B342D4C379F3455937F20DA6 /* Pods-iOS-app-template-iOS-app-templateUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-app-template-iOS-app-templateUITests.release.xcconfig"; path = "Target Support Files/Pods-iOS-app-template-iOS-app-templateUITests/Pods-iOS-app-template-iOS-app-templateUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C628E1E0DC80DD8D9666918F /* Pods_iOS_app_template_iOS_app_templateUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_app_template_iOS_app_templateUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6CA81AF4D66FCA0702EC99E /* Pods-iOS-app-template.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-app-template.debug.xcconfig"; path = "Target Support Files/Pods-iOS-app-template/Pods-iOS-app-template.debug.xcconfig"; sourceTree = "<group>"; };
+		FB1C74B52483337900D3D1A7 /* HTTPService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPService.swift; sourceTree = "<group>"; };
+		FB1C74B72483364D00D3D1A7 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		FB1C74B9248336FF00D3D1A7 /* HTTPResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPResult.swift; sourceTree = "<group>"; };
+		FB1C74BB2483387800D3D1A7 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		FB1C74BD2483399B00D3D1A7 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FB463404248315D400931404 /* iOS-app-template.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-app-template.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB463407248315D400931404 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FB463409248315D400931404 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FB46340B248315D400931404 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FB46340E248315D400931404 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FB463410248315D500931404 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -117,6 +125,10 @@
 		FB1C74B42483326900D3D1A7 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				FB1C74B72483364D00D3D1A7 /* HTTPMethod.swift */,
+				FB1C74B52483337900D3D1A7 /* HTTPService.swift */,
+				FB1C74B9248336FF00D3D1A7 /* HTTPResult.swift */,
+				FB1C74BB2483387800D3D1A7 /* HTTPClient.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -148,7 +160,7 @@
 			children = (
 				FB1C74B42483326900D3D1A7 /* Networking */,
 				FB463407248315D400931404 /* AppDelegate.swift */,
-				FB463409248315D400931404 /* SceneDelegate.swift */,
+				FB1C74BD2483399B00D3D1A7 /* SceneDelegate.swift */,
 				FB46340B248315D400931404 /* ViewController.swift */,
 				FB46340D248315D400931404 /* Main.storyboard */,
 				FB463410248315D500931404 /* Assets.xcassets */,
@@ -415,9 +427,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB1C74BA248336FF00D3D1A7 /* HTTPResult.swift in Sources */,
+				FB1C74BE2483399B00D3D1A7 /* SceneDelegate.swift in Sources */,
 				FB46340C248315D400931404 /* ViewController.swift in Sources */,
+				FB1C74B62483337900D3D1A7 /* HTTPService.swift in Sources */,
+				FB1C74BC2483387800D3D1A7 /* HTTPClient.swift in Sources */,
 				FB463408248315D400931404 /* AppDelegate.swift in Sources */,
-				FB46340A248315D400931404 /* SceneDelegate.swift in Sources */,
+				FB1C74B82483364D00D3D1A7 /* HTTPMethod.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -592,14 +608,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JL9CJ7YC75;
+				DEVELOPMENT_TEAM = 85U8CK92F9;
 				INFOPLIST_FILE = "iOS-app-template/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.michel.iOS-app-template";
+				PRODUCT_BUNDLE_IDENTIFIER = "iOS-app-template";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -612,14 +628,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JL9CJ7YC75;
+				DEVELOPMENT_TEAM = 85U8CK92F9;
 				INFOPLIST_FILE = "iOS-app-template/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.michel.iOS-app-template";
+				PRODUCT_BUNDLE_IDENTIFIER = "iOS-app-template";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
