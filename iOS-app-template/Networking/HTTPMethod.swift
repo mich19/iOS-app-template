@@ -8,9 +8,13 @@
 
 import Foundation
 
-enum HTTPMethod {
+enum HTTPMethod: String {
     case post
     case get
     case put
     case delete
+    
+    var httpValue: String {
+        return rawValue.uppercased()
+    }
 }

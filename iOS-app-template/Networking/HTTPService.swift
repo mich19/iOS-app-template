@@ -9,11 +9,23 @@
 import Foundation
 
 protocol HTTPService {
-    var url: String { get }
+    var host: String { get }
     var endPoint: String { get }
     var method: HTTPMethod { get }
-    var extraHeaders: [String: Any]? { get }
-    var query: String? { get }
+    var extraHeaders: [String: String]? { get }
+    var queryParams: [String: String]? { get }
     var body: Data? { get }
-    var parameters: [String: Any]? { get }
+}
+
+extension HTTPService {
+    func url() -> URL? {
+        return URL(string: "\(host)/\(endPoint)\(query() ?? "")")
+    }
+    
+    func query() -> String? {
+        let customAllowedSet =  CharacterSet(charactersIn:"!\"#%/<>@?+\\^`{|}'").inverted
+        return queryParams?.reduce("?") { (lastQuery, queryParam) -> String in
+            return "\(lastQuery)\(queryParam.key)=\(queryParam.value)&"
+        }.addingPercentEncoding(withAllowedCharacters: customAllowedSet)
+    }
 }
