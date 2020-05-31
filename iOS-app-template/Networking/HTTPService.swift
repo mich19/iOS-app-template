@@ -24,8 +24,13 @@ extension HTTPService {
     
     func query() -> String? {
         let customAllowedSet =  CharacterSet(charactersIn:"!\"#%/<>@?+\\^`{|}'").inverted
-        return queryParams?.reduce("?") { (lastQuery, queryParam) -> String in
+        let query = queryParams?.reduce("") { (lastQuery, queryParam) -> String in
             return "\(lastQuery)\(queryParam.key)=\(queryParam.value)&"
         }.addingPercentEncoding(withAllowedCharacters: customAllowedSet)
+        
+        guard let _query = query else {
+            return nil
+        }
+        return "?" + _query
     }
 }

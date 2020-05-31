@@ -18,12 +18,12 @@
 		FB1C74C324841DB400D3D1A7 /* Codable+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1C74C224841DB400D3D1A7 /* Codable+Ext.swift */; };
 		FB1C74C52484208F00D3D1A7 /* Data+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1C74C42484208F00D3D1A7 /* Data+Ext.swift */; };
 		FB1C74C72484231E00D3D1A7 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1C74C62484231E00D3D1A7 /* String+Ext.swift */; };
+		FB1C74CA2484265500D3D1A7 /* NetworkingTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1C74C92484265500D3D1A7 /* NetworkingTestCase.swift */; };
 		FB463408248315D400931404 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB463407248315D400931404 /* AppDelegate.swift */; };
 		FB46340C248315D400931404 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB46340B248315D400931404 /* ViewController.swift */; };
 		FB46340F248315D400931404 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB46340D248315D400931404 /* Main.storyboard */; };
 		FB463411248315D500931404 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB463410248315D500931404 /* Assets.xcassets */; };
 		FB463414248315D500931404 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB463412248315D500931404 /* LaunchScreen.storyboard */; };
-		FB46341F248315D500931404 /* iOS_app_templateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB46341E248315D500931404 /* iOS_app_templateTests.swift */; };
 		FB46342A248315D500931404 /* iOS_app_templateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB463429248315D500931404 /* iOS_app_templateUITests.swift */; };
 		FEE9EEE66E1AEDD09D2E03B8 /* Pods_iOS_app_template.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0693C1BAE24B5E4BC335F136 /* Pods_iOS_app_template.framework */; };
 /* End PBXBuildFile section */
@@ -64,6 +64,7 @@
 		FB1C74C224841DB400D3D1A7 /* Codable+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Codable+Ext.swift"; sourceTree = "<group>"; };
 		FB1C74C42484208F00D3D1A7 /* Data+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Ext.swift"; sourceTree = "<group>"; };
 		FB1C74C62484231E00D3D1A7 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		FB1C74C92484265500D3D1A7 /* NetworkingTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTestCase.swift; sourceTree = "<group>"; };
 		FB463404248315D400931404 /* iOS-app-template.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-app-template.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB463407248315D400931404 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB46340B248315D400931404 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,7 +73,6 @@
 		FB463413248315D500931404 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB463415248315D500931404 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB46341A248315D500931404 /* iOS-app-templateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-app-templateTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FB46341E248315D500931404 /* iOS_app_templateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_app_templateTests.swift; sourceTree = "<group>"; };
 		FB463420248315D500931404 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB463425248315D500931404 /* iOS-app-templateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-app-templateUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB463429248315D500931404 /* iOS_app_templateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_app_templateUITests.swift; sourceTree = "<group>"; };
@@ -152,6 +152,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		FB1C74C82484263400D3D1A7 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				FB1C74C92484265500D3D1A7 /* NetworkingTestCase.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		FB4633FB248315D300931404 = {
 			isa = PBXGroup;
 			children = (
@@ -193,7 +201,7 @@
 		FB46341D248315D500931404 /* iOS-app-templateTests */ = {
 			isa = PBXGroup;
 			children = (
-				FB46341E248315D500931404 /* iOS_app_templateTests.swift */,
+				FB1C74C82484263400D3D1A7 /* Networking */,
 				FB463420248315D500931404 /* Info.plist */,
 			);
 			path = "iOS-app-templateTests";
@@ -465,7 +473,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB46341F248315D500931404 /* iOS_app_templateTests.swift in Sources */,
+				FB1C74CA2484265500D3D1A7 /* NetworkingTestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

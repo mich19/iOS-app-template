@@ -10,38 +10,40 @@ import Foundation
 
 class NetworLogging {
     static func log(request: URLRequest) {
-        debugPrint("===================== HTTP Request ====================")
-        debugPrint("\(request.httpMethod ?? "") \(request.url?.absoluteString ?? "")")
-        debugPrint("Headers:")
+        print("===================== HTTP Request ====================\n")
+        print("\(request.httpMethod ?? "") \(request.url?.absoluteString ?? "")\n")
+        print("Headers:")
         request.allHTTPHeaderFields?.forEach{ (header) in
-            debugPrint("\(header.key) \(header.value)")
+            print("\(header.key) \(header.value)")
         }
         if let body = request.httpBody {
-            debugPrint("Body:")
-            debugPrint("\(String(data: body, encoding: .utf8) ?? "")")
+            print("\nBody:")
+            print(String(data: body, encoding: .utf8) ?? "")
         }
-        debugPrint("=======================================================")
+        print("=======================================================")
     }
     
     static func log(response: URLResponse?, withData data: Data?, andError error: Error?) {
-        debugPrint("==================== HTTP Response ====================")
+        print("==================== HTTP Response ====================\n")
         if let response = response as? HTTPURLResponse {
-            debugPrint("\(response.statusCode) \(response.url?.absoluteString ?? "")")
+            print("\(response.statusCode) \(response.url?.absoluteString ?? "")\n")
+            print("Headers:")
             response.allHeaderFields.forEach{ (header) in
-                debugPrint("\(header.key) \(header.value)")
+                print("\(header.key) \(header.value)")
             }
         }
         if let error = error {
-            debugPrint("\(error.localizedDescription)")
+            print("\n\(error.localizedDescription)")
         } else if let data = data {
-            let json = try? JSONSerialization.jsonObject(with: data, options: [])
-            
-            if let jsonDictionary = json as? NSDictionary {
-                debugPrint("Body: \(jsonDictionary)")
-            } else {
-                debugPrint("Body: \(String(data: data, encoding: .utf8) ?? "")")
-            }
+//            let json = try? JSONSerialization.jsonObject(with: data, options: [])
+//
+//            if let jsonDictionary = json as? NSDictionary {
+//                print("\nBody:\n\(jsonDictionary)")
+//            } else {
+                print("\nBody:")
+                print(String(data: data, encoding: .utf8) ?? "")
+//            }
         }
-        debugPrint("=======================================================")
+        print("=======================================================")
     }
 }
