@@ -45,7 +45,7 @@ class Spinner: UIView, CAAnimationDelegate {
         return animation
     }()
     
-    private let color: CGColor = UIColor.green.cgColor
+    var color: UIColor?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -78,7 +78,11 @@ class Spinner: UIView, CAAnimationDelegate {
     private func animate() {
         let animationKey = "strokeAnimation"
         circularLayer.removeAnimation(forKey: animationKey)
-        circularLayer.strokeColor = color
+        if let color = self.color {
+            circularLayer.strokeColor = color.cgColor
+        } else {
+            circularLayer.strokeColor = tintColor.cgColor
+        }
         
         let strokeAnimationGroup = CAAnimationGroup()
         strokeAnimationGroup.duration = 1.0 + outAnimation.beginTime
