@@ -25,6 +25,9 @@
 		FB463411248315D500931404 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB463410248315D500931404 /* Assets.xcassets */; };
 		FB463414248315D500931404 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB463412248315D500931404 /* LaunchScreen.storyboard */; };
 		FB46342A248315D500931404 /* iOS_app_templateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB463429248315D500931404 /* iOS_app_templateUITests.swift */; };
+		FB95C2F3248C4FAE00426040 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB95C2F2248C4FAE00426040 /* Spinner.swift */; };
+		FB95C2F5248C500400426040 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB95C2F4248C500400426040 /* UIViewController+Ext.swift */; };
+		FB95C2F7248C531A00426040 /* Numerics+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB95C2F6248C531A00426040 /* Numerics+Ext.swift */; };
 		FEE9EEE66E1AEDD09D2E03B8 /* Pods_iOS_app_template.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0693C1BAE24B5E4BC335F136 /* Pods_iOS_app_template.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +80,9 @@
 		FB463425248315D500931404 /* iOS-app-templateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-app-templateUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB463429248315D500931404 /* iOS_app_templateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_app_templateUITests.swift; sourceTree = "<group>"; };
 		FB46342B248315D500931404 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB95C2F2248C4FAE00426040 /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
+		FB95C2F4248C500400426040 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
+		FB95C2F6248C531A00426040 /* Numerics+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Numerics+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +154,8 @@
 				FB1C74C224841DB400D3D1A7 /* Codable+Ext.swift */,
 				FB1C74C42484208F00D3D1A7 /* Data+Ext.swift */,
 				FB1C74C62484231E00D3D1A7 /* String+Ext.swift */,
+				FB95C2F4248C500400426040 /* UIViewController+Ext.swift */,
+				FB95C2F6248C531A00426040 /* Numerics+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -185,6 +193,7 @@
 		FB463406248315D400931404 /* iOS-app-template */ = {
 			isa = PBXGroup;
 			children = (
+				FB95C2F1248C4F4E00426040 /* UIComponents */,
 				FB1C74C124841DA200D3D1A7 /* Extensions */,
 				FB1C74B42483326900D3D1A7 /* Networking */,
 				FB463407248315D400931404 /* AppDelegate.swift */,
@@ -214,6 +223,14 @@
 				FB46342B248315D500931404 /* Info.plist */,
 			);
 			path = "iOS-app-templateUITests";
+			sourceTree = "<group>";
+		};
+		FB95C2F1248C4F4E00426040 /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				FB95C2F2248C4FAE00426040 /* Spinner.swift */,
+			);
+			path = UIComponents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -456,12 +473,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB1C74C0248418D500D3D1A7 /* NetworkLogging.swift in Sources */,
+				FB95C2F5248C500400426040 /* UIViewController+Ext.swift in Sources */,
 				FB1C74C52484208F00D3D1A7 /* Data+Ext.swift in Sources */,
 				FB1C74BA248336FF00D3D1A7 /* HTTPResult.swift in Sources */,
 				FB1C74BE2483399B00D3D1A7 /* SceneDelegate.swift in Sources */,
 				FB46340C248315D400931404 /* ViewController.swift in Sources */,
 				FB1C74B62483337900D3D1A7 /* HTTPService.swift in Sources */,
 				FB1C74BC2483387800D3D1A7 /* HTTPClient.swift in Sources */,
+				FB95C2F3248C4FAE00426040 /* Spinner.swift in Sources */,
+				FB95C2F7248C531A00426040 /* Numerics+Ext.swift in Sources */,
 				FB463408248315D400931404 /* AppDelegate.swift in Sources */,
 				FB1C74C324841DB400D3D1A7 /* Codable+Ext.swift in Sources */,
 				FB1C74B82483364D00D3D1A7 /* HTTPMethod.swift in Sources */,
